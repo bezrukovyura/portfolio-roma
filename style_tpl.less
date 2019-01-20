@@ -1,0 +1,176 @@
+@import "style/reset.less";
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic-ext');
+body {
+    max-width: 1366px;
+    margin: 0 auto;
+    position: relative;
+    font-family: Roboto;
+}
+
+.hash {
+    font {
+        color: #7540EE;
+    }
+}
+
+.wrapp-roma {
+    .top-menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 24px;
+        .logo {
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            font-size: 32px;
+            font {
+                color: #7B2BF2;
+            }
+        }
+        ul {
+            display: flex;
+            li {
+                display: block;
+                margin: 0 0 0 63px;
+                a {
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .wrapper {
+        max-width: 1170px;
+        width: 97%;
+        margin: 0 auto;
+        .main-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .description {
+                font-style: normal;
+                font-weight: 500;
+                line-height: 31px;
+                font-size: 24px;
+            }
+            .title {
+                font-style: normal;
+                font-weight: 500;
+                line-height: 61px;
+                font-size: 48px;
+                margin: 86px 0 0 0;
+            }
+            .hash {
+                font-style: normal;
+                font-weight: 300;
+                line-height: 31px;
+                font-size: 24px;
+                margin: 45px 0 0 0;
+            }
+        }
+        .title_project {
+            font-style: normal;
+            font-weight: 200;
+            line-height: 61px;
+            font-size: 48px;
+            text-align: center;
+            width: 100%;
+        }
+        .all_projects {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 90px 0 0 0;
+            .item {
+                max-width: 48%;
+                overflow: hidden;
+                margin: 0 0 90px 0;
+                display: block;
+                .lazy_img {
+                    img {
+                        width: 100%;
+                        height: initial;
+                    }
+                }
+                .title {
+                    font-style: normal;
+                    font-weight: 200;
+                    display: block;
+                    line-height: 61px;
+                    font-size: 48px;
+                    margin: 26px 0 0 0;
+                }
+                .hash {
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 31px;
+                    font-size: 24px;
+                    margin: 15px 0 0 0;
+                }
+            }
+        }
+        .personal_info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 45px 0 0 0;
+            .personal {
+                display: flex;
+                justify-content: space-between;
+                max-width: 490px;
+                width: 90%;
+                .item {
+                    .title {
+                        margin: 30px 0 0 0;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 31px;
+                        font-size: 24px;
+                        display: block;
+                    }
+                    .description {
+                        font-style: normal;
+                        font-weight: normal;
+                        line-height: 23px;
+                        font-size: 18px;
+                        margin: 4px 0 0 0;
+                        color: #C1C1C1;
+                    }
+                }
+            }
+            .all_info {
+                width: 50%;
+                .description {
+                    white-space: pre;
+                    white-space: pre-wrap;
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: 46px;
+                    font-size: 36px;
+                    line-height: 24px;
+                    strong {
+                        font-style: normal;
+                        font-weight: normal;
+                        line-height: 23px;
+                        font-size: 18px;
+                        color: #7540EE;
+                        line-height: 10px;
+                    }
+                }
+            }
+        }
+        .copy {
+            font-style: normal;
+            font-weight: normal;
+            line-height: 23px;
+            font-size: 18px;
+            text-align: center;
+            color: #C1C1C1;
+            margin: 130px 0 30px 0;
+        }
+    }
+}
