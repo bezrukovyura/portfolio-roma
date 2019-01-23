@@ -13,6 +13,58 @@ body {
     }
 }
 
+.all_projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 90px 0 0 0;
+    .item {
+        max-width: 48%;
+        overflow: hidden;
+        margin: 0 0 90px 0;
+        display: block;
+        .lazy_img {
+            img {
+                width: 100%;
+                height: initial;
+                transition: all 0.5s;
+                overflow: hidden;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .title {
+            font-style: normal;
+            font-weight: 200;
+            display: block;
+            line-height: 61px;
+            font-size: 48px;
+            margin: 26px 0 0 0;
+        }
+        .hash {
+            font-style: normal;
+            font-weight: 300;
+            line-height: 31px;
+            font-size: 24px;
+            margin: 15px 0 0 0;
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+    margin: 130px auto;
+    a {
+        font-style: normal;
+        font-weight: 300;
+        line-height: 23px;
+        font-size: 18px;
+    }
+}
+
 .wrapp-roma {
     .top-menu {
         width: 100%;
@@ -80,39 +132,6 @@ body {
             text-align: center;
             width: 100%;
         }
-        .all_projects {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin: 90px 0 0 0;
-            .item {
-                max-width: 48%;
-                overflow: hidden;
-                margin: 0 0 90px 0;
-                display: block;
-                .lazy_img {
-                    img {
-                        width: 100%;
-                        height: initial;
-                    }
-                }
-                .title {
-                    font-style: normal;
-                    font-weight: 200;
-                    display: block;
-                    line-height: 61px;
-                    font-size: 48px;
-                    margin: 26px 0 0 0;
-                }
-                .hash {
-                    font-style: normal;
-                    font-weight: 300;
-                    line-height: 31px;
-                    font-size: 24px;
-                    margin: 15px 0 0 0;
-                }
-            }
-        }
         .personal_info {
             display: flex;
             justify-content: space-between;
@@ -172,5 +191,167 @@ body {
             color: #C1C1C1;
             margin: 130px 0 30px 0;
         }
+    }
+    .page {
+        >.title {
+            font-style: normal;
+            font-weight: 200;
+            line-height: 61px;
+            font-size: 48px;
+            margin: 70px 0 0 0;
+        }
+        .info {
+            margin: 50px 0 0 0;
+            display: flex;
+            justify-content: space-between;
+            >div {
+                width: 50%;
+            }
+            .description {
+                font-style: normal;
+                font-weight: 300;
+                line-height: 23px;
+                font-size: 18px;
+                .title {
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 31px;
+                    font-size: 24px;
+                    margin: 0 0 6px 0;
+                }
+            }
+        }
+        .content {
+            margin: 70px 0 0 0;
+            .full-img {
+                margin: 0 !important;
+                padding: 0 !important;
+                img {
+                    width: 100%;
+                    height: initial;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .wrapp-roma .wrapper .personal_info .all_info {
+        width: 44%;
+        .description {
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .wrapp-roma .wrapper {
+        max-width: 89%;
+        .main-block {
+            flex-direction: column;
+        }
+        .title_project {
+            margin: 80px 0 0 0;
+        }
+        .personal_info {
+            flex-direction: column;
+            max-width: 100%;
+            .all_info {
+                width: 90%;
+                margin: 60px 0 0 0;
+                .description {
+                    font-size: 24px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+    .all_projects .item {
+        margin: 0 0 40px 0;
+        .title {
+            line-height: 28px;
+            font-size: 24px;
+            margin: 11px 0 0 0;
+        }
+        .hash {
+            line-height: 19px;
+            font-size: 14px;
+            margin: 9px 0 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .wrapp-roma .wrapper .personal_info .personal .item {
+        width: 48%;
+        img {
+            width: 100%;
+        }
+        .title {
+            margin: 15px 0 0 0;
+            line-height: 20px;
+            font-size: 16px;
+        }
+        .description {
+            line-height: 17px;
+            font-size: 13px;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #menu-mainmenu {
+        display: none;
+    }
+    .all_projects .item {
+        max-width: 100%;
+    }
+    .main-block .left img {
+        max-width: 100%;
+        height: initial;
+    }
+    .wrapp-roma .wrapper .main-block .description {
+        line-height: 23px;
+        font-size: 18px;
+    }
+    .wrapp-roma .wrapper .main-block .title {
+        line-height: 31px;
+        font-size: 24px;
+        margin: 32px 0 0 0;
+    }
+    .wrapp-roma .wrapper .main-block .hash {
+        font-style: normal;
+        font-weight: 300;
+        line-height: 31px;
+        font-size: 24px;
+        margin: 15px 0 0 0;
+        font-weight: 300;
+        line-height: 18px;
+        font-size: 14px;
+    }
+    .wrapp-roma .page>.title {
+        margin: 20px 0 0 0;
+        font-weight: 200;
+        line-height: 31px;
+        font-size: 24px;
+    }
+    .wrapp-roma .page .info {
+        margin: 30px 0 0 0;
+        flex-direction: column;
+    }
+    .wrapp-roma .page .info>div {
+        width: 100%;
+        margin: 30px 0 0 0;
+        line-height: 18px;
+        font-size: 14px;
+        .title {
+            line-height: 23px;
+            font-size: 18px;
+        }
+    }
+    .pagination {
+        max-width: 100%;
     }
 }

@@ -1,67 +1,55 @@
 <?php get_header(); ?>
-
-	<main role="main">
-	<!-- section -->
-	<section>
-
+<div class="page">
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+	<div class="title"><a href="<?php echo the_permalink() ?>"><?php the_title(); ?></a></div>
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="info">
+		<div class="description">
+			<div class="title">Goal</div>
+			<?php echo get_field("goal", get_the_ID());?>
+		</div>
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
+		<div class="description">
+			<div class="title">Decision</div>
+			<?php echo get_field("decision", get_the_ID());?>
+		</div>
+	</div>
+	<div class="content"><?php the_content(); ?></div>
+	<div class="pagination">
+		<?php previous_post_link('%link', '<  last project') ?>
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
-
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
-
-			<?php the_content(); // Dynamic Content ?>
-
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
-
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
-
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
-
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
-			<?php comments_template(); ?>
-
-		</article>
-		<!-- /article -->
-
+		<?php next_post_link('%link', 'next project  >') ?> 
+	</div>
 	<?php endwhile; ?>
-
-	<?php else: ?>
-
-		<!-- article -->
-		<article>
-
-			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
-
-		</article>
-		<!-- /article -->
-
 	<?php endif; ?>
 
-	</section>
-	<!-- /section -->
-	</main>
+	<div class="all_projects">
+		<?php
+		$related = get_posts( 
+			array( 
+				'category__in' => wp_get_post_categories($post->ID),
+				'numberposts' => 5,
+				'post__not_in' => array($post->ID)
+			) 
+		);
+		if( $related ) 
+			foreach( $related as $post ) {
+				setup_postdata($post);
+			?>
 
-<?php get_sidebar(); ?>
-
+				<a href="<?php echo $post->guid; ?><" class="item">
+					<div class="lazy_img">
+						<img src="<?php echo get_field("image", $post->ID);?>" alt="">
+					</div>
+					<h4 class="title"><?php echo $post->post_title; ?></h4>
+					<div class="hash"><?php echo $post->post_excerpt; ?></div>
+				</a>
+								
+				<?php
+			}
+		wp_reset_postdata(); 
+		?>
+	</div>
+</div>
 <?php get_footer(); ?>
+ 

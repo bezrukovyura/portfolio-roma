@@ -1,15 +1,6 @@
 <?php /* Template Name: Portfolio Roma */ ?>
+<?php get_header(); ?>
 
-<link rel="stylesheet" href="/wp-content/themes/portfolio-roma/style_tpl.css">
-
-<div class="wrapp-roma">
-
-    <div class="top-menu">
-        <h1 class="logo">CREATIVE <font>5</font></h1>
-        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-    </div>
-
-    <div class="wrapper">
 
         <div class="main-block">
         <?php
@@ -35,11 +26,12 @@
 
         <div class="title_project">Projects</div>
 
-        <div class="all_projects">
+        <div class="all_projects" id="all_projects">
         <?php
             global $post;
             $myposts = get_posts( array('category' => 2) );
             foreach( $myposts as $post ){
+                r_print( $post);
                 ?>
                 <a href="<?php echo $post->guid; ?><" class="item">
                     <div class="lazy_img">
@@ -57,7 +49,7 @@
         <div class="title_project">Contacts</div>
 
 
-        <div class="personal_info">
+        <div class="personal_info" id="personal_info">
             <div class="personal">
             <?php
                 global $post;
@@ -96,22 +88,4 @@
             ?>
             </div>
         </div>
-
-        <div class="copy">
-            © Creative5 2019
-        </div>
-
-    </div>
-
-
-
-</div>
-
-
-<script>
-    hash = document.querySelectorAll(".hash");
-    for(let i = 0; i < hash.length; i++) {
-        let text = hash[0].innerHTML;
-        hash[i].innerHTML = text.split("#").join("<font>#</font>");
-    }
-</script>
+        <?php get_footer(); ?>

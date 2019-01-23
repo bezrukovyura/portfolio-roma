@@ -1,1 +1,470 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic-ext);a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline;box-sizing:border-box}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}a{color:initial;text-decoration:none}body{max-width:1366px;margin:0 auto;position:relative;font-family:Roboto}.hash font{color:#7540EE}.wrapp-roma .top-menu{width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 24px}.wrapp-roma .top-menu .logo{font-style:normal;font-weight:500;line-height:normal;font-size:32px}.wrapp-roma .top-menu .logo font{color:#7B2BF2}.wrapp-roma .top-menu ul{display:flex}.wrapp-roma .top-menu ul li{display:block;margin:0 0 0 63px}.wrapp-roma .top-menu ul li a{font-style:normal;font-weight:300;line-height:normal;font-size:18px}.wrapp-roma .wrapper{max-width:1170px;width:97%;margin:0 auto}.wrapp-roma .wrapper .main-block{display:flex;align-items:center;justify-content:space-between}.wrapp-roma .wrapper .main-block .description{font-style:normal;font-weight:500;line-height:31px;font-size:24px}.wrapp-roma .wrapper .main-block .title{font-style:normal;font-weight:500;line-height:61px;font-size:48px;margin:86px 0 0}.wrapp-roma .wrapper .main-block .hash{font-style:normal;font-weight:300;line-height:31px;font-size:24px;margin:45px 0 0}.wrapp-roma .wrapper .title_project{font-style:normal;font-weight:200;line-height:61px;font-size:48px;text-align:center;width:100%}.wrapp-roma .wrapper .all_projects{display:flex;justify-content:space-between;flex-wrap:wrap;margin:90px 0 0}.wrapp-roma .wrapper .all_projects .item{max-width:48%;overflow:hidden;margin:0 0 90px;display:block}.wrapp-roma .wrapper .all_projects .item .lazy_img img{width:100%;height:initial}.wrapp-roma .wrapper .all_projects .item .title{font-style:normal;font-weight:200;display:block;line-height:61px;font-size:48px;margin:26px 0 0}.wrapp-roma .wrapper .all_projects .item .hash{font-style:normal;font-weight:300;line-height:31px;font-size:24px;margin:15px 0 0}.wrapp-roma .wrapper .personal_info{display:flex;justify-content:space-between;align-items:center;margin:45px 0 0}.wrapp-roma .wrapper .personal_info .personal{display:flex;justify-content:space-between;max-width:490px;width:90%}.wrapp-roma .wrapper .personal_info .personal .item .title{margin:30px 0 0;font-style:normal;font-weight:300;line-height:31px;font-size:24px;display:block}.wrapp-roma .wrapper .personal_info .personal .item .description{font-style:normal;font-weight:400;line-height:23px;font-size:18px;margin:4px 0 0;color:#C1C1C1}.wrapp-roma .wrapper .personal_info .all_info{width:50%}.wrapp-roma .wrapper .personal_info .all_info .description{white-space:pre;white-space:pre-wrap;font-style:normal;font-weight:400;font-size:36px;line-height:24px}.wrapp-roma .wrapper .personal_info .all_info .description strong{font-style:normal;font-weight:400;font-size:18px;color:#7540EE;line-height:10px}.wrapp-roma .wrapper .copy{font-style:normal;font-weight:400;line-height:23px;font-size:18px;text-align:center;color:#C1C1C1;margin:130px 0 30px}
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic-ext');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  color: initial;
+  text-decoration: none;
+}
+body {
+  max-width: 1366px;
+  margin: 0 auto;
+  position: relative;
+  font-family: Roboto;
+}
+.hash font {
+  color: #7540EE;
+}
+.all_projects {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 90px 0 0 0;
+}
+.all_projects .item {
+  max-width: 48%;
+  overflow: hidden;
+  margin: 0 0 90px 0;
+  display: block;
+}
+.all_projects .item .lazy_img img {
+  width: 100%;
+  height: initial;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.all_projects .item .lazy_img img:hover {
+  transform: scale(1.1);
+}
+.all_projects .item .title {
+  font-style: normal;
+  font-weight: 200;
+  display: block;
+  line-height: 61px;
+  font-size: 48px;
+  margin: 26px 0 0 0;
+}
+.all_projects .item .hash {
+  font-style: normal;
+  font-weight: 300;
+  line-height: 31px;
+  font-size: 24px;
+  margin: 15px 0 0 0;
+}
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  max-width: 350px;
+  margin: 130px auto;
+}
+.pagination a {
+  font-style: normal;
+  font-weight: 300;
+  line-height: 23px;
+  font-size: 18px;
+}
+.wrapp-roma .top-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+}
+.wrapp-roma .top-menu .logo {
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 32px;
+}
+.wrapp-roma .top-menu .logo font {
+  color: #7B2BF2;
+}
+.wrapp-roma .top-menu ul {
+  display: flex;
+}
+.wrapp-roma .top-menu ul li {
+  display: block;
+  margin: 0 0 0 63px;
+}
+.wrapp-roma .top-menu ul li a {
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 18px;
+}
+.wrapp-roma .wrapper {
+  max-width: 1170px;
+  width: 97%;
+  margin: 0 auto;
+}
+.wrapp-roma .wrapper .main-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapp-roma .wrapper .main-block .description {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 31px;
+  font-size: 24px;
+}
+.wrapp-roma .wrapper .main-block .title {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 61px;
+  font-size: 48px;
+  margin: 86px 0 0 0;
+}
+.wrapp-roma .wrapper .main-block .hash {
+  font-style: normal;
+  font-weight: 300;
+  line-height: 31px;
+  font-size: 24px;
+  margin: 45px 0 0 0;
+}
+.wrapp-roma .wrapper .title_project {
+  font-style: normal;
+  font-weight: 200;
+  line-height: 61px;
+  font-size: 48px;
+  text-align: center;
+  width: 100%;
+}
+.wrapp-roma .wrapper .personal_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45px 0 0 0;
+}
+.wrapp-roma .wrapper .personal_info .personal {
+  display: flex;
+  justify-content: space-between;
+  max-width: 490px;
+  width: 90%;
+}
+.wrapp-roma .wrapper .personal_info .personal .item .title {
+  margin: 30px 0 0 0;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 31px;
+  font-size: 24px;
+  display: block;
+}
+.wrapp-roma .wrapper .personal_info .personal .item .description {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 23px;
+  font-size: 18px;
+  margin: 4px 0 0 0;
+  color: #C1C1C1;
+}
+.wrapp-roma .wrapper .personal_info .all_info {
+  width: 50%;
+}
+.wrapp-roma .wrapper .personal_info .all_info .description {
+  white-space: pre;
+  white-space: pre-wrap;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 46px;
+  font-size: 36px;
+  line-height: 24px;
+}
+.wrapp-roma .wrapper .personal_info .all_info .description strong {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 23px;
+  font-size: 18px;
+  color: #7540EE;
+  line-height: 10px;
+}
+.wrapp-roma .wrapper .copy {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 23px;
+  font-size: 18px;
+  text-align: center;
+  color: #C1C1C1;
+  margin: 130px 0 30px 0;
+}
+.wrapp-roma .page > .title {
+  font-style: normal;
+  font-weight: 200;
+  line-height: 61px;
+  font-size: 48px;
+  margin: 70px 0 0 0;
+}
+.wrapp-roma .page .info {
+  margin: 50px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapp-roma .page .info > div {
+  width: 50%;
+}
+.wrapp-roma .page .info .description {
+  font-style: normal;
+  font-weight: 300;
+  line-height: 23px;
+  font-size: 18px;
+}
+.wrapp-roma .page .info .description .title {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 31px;
+  font-size: 24px;
+  margin: 0 0 6px 0;
+}
+.wrapp-roma .page .content {
+  margin: 70px 0 0 0;
+}
+.wrapp-roma .page .content .full-img {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.wrapp-roma .page .content .full-img img {
+  width: 100%;
+  height: initial;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 1100px) {
+  .wrapp-roma .wrapper .personal_info .all_info {
+    width: 44%;
+  }
+  .wrapp-roma .wrapper .personal_info .all_info .description {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 920px) {
+  .wrapp-roma .wrapper {
+    max-width: 89%;
+  }
+  .wrapp-roma .wrapper .main-block {
+    flex-direction: column;
+  }
+  .wrapp-roma .wrapper .title_project {
+    margin: 80px 0 0 0;
+  }
+  .wrapp-roma .wrapper .personal_info {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .wrapp-roma .wrapper .personal_info .all_info {
+    width: 90%;
+    margin: 60px 0 0 0;
+  }
+  .wrapp-roma .wrapper .personal_info .all_info .description {
+    font-size: 24px;
+    line-height: 18px;
+  }
+  .all_projects .item {
+    margin: 0 0 40px 0;
+  }
+  .all_projects .item .title {
+    line-height: 28px;
+    font-size: 24px;
+    margin: 11px 0 0 0;
+  }
+  .all_projects .item .hash {
+    line-height: 19px;
+    font-size: 14px;
+    margin: 9px 0 0 0;
+  }
+}
+@media screen and (max-width: 760px) {
+  .wrapp-roma .wrapper .personal_info .personal .item {
+    width: 48%;
+  }
+  .wrapp-roma .wrapper .personal_info .personal .item img {
+    width: 100%;
+  }
+  .wrapp-roma .wrapper .personal_info .personal .item .title {
+    margin: 15px 0 0 0;
+    line-height: 20px;
+    font-size: 16px;
+  }
+  .wrapp-roma .wrapper .personal_info .personal .item .description {
+    line-height: 17px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 760px) {
+  #menu-mainmenu {
+    display: none;
+  }
+  .all_projects .item {
+    max-width: 100%;
+  }
+  .main-block .left img {
+    max-width: 100%;
+    height: initial;
+  }
+  .wrapp-roma .wrapper .main-block .description {
+    line-height: 23px;
+    font-size: 18px;
+  }
+  .wrapp-roma .wrapper .main-block .title {
+    line-height: 31px;
+    font-size: 24px;
+    margin: 32px 0 0 0;
+  }
+  .wrapp-roma .wrapper .main-block .hash {
+    font-style: normal;
+    line-height: 31px;
+    font-size: 24px;
+    margin: 15px 0 0 0;
+    font-weight: 300;
+    line-height: 18px;
+    font-size: 14px;
+  }
+  .wrapp-roma .page > .title {
+    margin: 20px 0 0 0;
+    font-weight: 200;
+    line-height: 31px;
+    font-size: 24px;
+  }
+  .wrapp-roma .page .info {
+    margin: 30px 0 0 0;
+    flex-direction: column;
+  }
+  .wrapp-roma .page .info > div {
+    width: 100%;
+    margin: 30px 0 0 0;
+    line-height: 18px;
+    font-size: 14px;
+  }
+  .wrapp-roma .page .info > div .title {
+    line-height: 23px;
+    font-size: 18px;
+  }
+  .pagination {
+    max-width: 100%;
+  }
+}
