@@ -1,0 +1,13 @@
+{ 
+  "name": "finder-unused-fonts", 
+  "version": "1.0.0", 
+  "description": "Search for used and unused fonts on the pagel", 
+  "main": "index.js", 
+  "keywords": ["unusedFonts", "FindFont", "Fonts", "Search Fonts"],
+  "scripts": { 
+    "gInstall": "npm i -g typescript",
+    "start": "tsc ./index.ts --lib \"dom, es6\"" 
+  }, 
+  "author": "Bezrukov Yurii", 
+  "license": "MIT"
+}

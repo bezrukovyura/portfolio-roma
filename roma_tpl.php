@@ -24,16 +24,21 @@
         ?>
         </div>
 
-        <div class="title_project">Projects</div>
+        <div class="title_project anime" id="all_projects">Projects</div>
 
-        <div class="all_projects" id="all_projects">
+        <div class="all_projects" >
         <?php
             global $post;
-            $myposts = get_posts( array('category' => 2) );
+            $myposts = get_posts( array(
+                'category' => 2,                
+                'numberposts' => 100,
+                'order'     => 'ASC',
+                'meta_key' => 'sort',
+                'orderby'   => 'meta_value'
+                ) );
             foreach( $myposts as $post ){
-                r_print( $post);
                 ?>
-                <a href="<?php echo $post->guid; ?><" class="item">
+                <a href="<?php echo $post->guid; ?>" class="item anime">
                     <div class="lazy_img">
                         <img src="<?php echo get_field("image", $post->ID);?>" alt="">
                     </div>
@@ -46,7 +51,7 @@
         ?>
         </div>
 
-        <div class="title_project">Contacts</div>
+        <div class="title_project anime">Contacts</div>
 
 
         <div class="personal_info" id="personal_info">
@@ -58,7 +63,7 @@
                 foreach( $myposts as $post ){
                     ?>
                     
-                    <div class="item">
+                    <div class="item anime">
                         <div class="lazy_img">
                             <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>" alt="<?php echo $post->post_title; ?>">
                         </div>
@@ -79,7 +84,7 @@
                 foreach( $myposts as $post ){
                     ?>
                     
-                    <div class="item">
+                    <div class="item anime">
                         <div class="description"><?php echo $post->post_content; ?></div>
                     </div>
                     <?php

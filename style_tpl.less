@@ -1,8 +1,19 @@
 @import "style/reset.less";
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic-ext');
+
+@import "style/animate.min.less";
+
+figure {
+    margin-block-start: 0px !important;
+    margin-block-end: 0px !important;
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important;
+    display: grid;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:100,300,400,500&subset=cyrillic-ext');
+
 body {
-    max-width: 1366px;
-    margin: 0 auto;
     position: relative;
     font-family: Roboto;
 }
@@ -19,18 +30,20 @@ body {
     flex-wrap: wrap;
     margin: 90px 0 0 0;
     .item {
-        max-width: 48%;
+        max-width: 48.719%;
         overflow: hidden;
         margin: 0 0 90px 0;
         display: block;
         .lazy_img {
+            max-height: 410px;
+            overflow: hidden;
             img {
                 width: 100%;
                 height: initial;
                 transition: all 0.5s;
                 overflow: hidden;
                 &:hover {
-                    transform: scale(1.1);
+                    transform: scale(1.05);
                 }
             }
         }
@@ -55,23 +68,63 @@ body {
 .pagination {
     display: flex;
     justify-content: space-between;
-    max-width: 350px;
+    max-width: 400px;
     margin: 130px auto;
     a {
+        transition: all 0.3s;
         font-style: normal;
         font-weight: 300;
         line-height: 23px;
         font-size: 18px;
+        &:hover {
+            color: #7540EE;
+        }
+        img {
+            margin: 0 14px -2px 14px;
+        }
+    }
+}
+
+.mobile-menu-text {
+    display: none;
+    background: white;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    
+    text-align: center;
+    a {
+        font-weight: 300;
+        line-height: 90px;
+        font-size: 36px;
     }
 }
 
 .wrapp-roma {
+    &.megamenu {
+        max-width: 90%;
+        margin: 0 auto;
+        transition: all 0.8s;
+        z-index: 200;
+        &.scroll-up {
+            position: fixed;
+            width: 100%;
+            max-width: 100%;
+            background: #ffffff;
+            top: 0;
+        }
+    }
     .top-menu {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 18px 24px;
+        padding: 18px 8%;
+        .mobile-menu {
+            display: none;
+        }
         .logo {
             font-style: normal;
             font-weight: 500;
@@ -91,6 +144,10 @@ body {
                     font-weight: 300;
                     line-height: normal;
                     font-size: 18px;
+                    transition: all 0.3s;
+                    &:hover {
+                        color: #7540EE;
+                    }
                 }
             }
         }
@@ -121,7 +178,7 @@ body {
                 font-weight: 300;
                 line-height: 31px;
                 font-size: 24px;
-                margin: 45px 0 0 0;
+                margin: 15px 0 0 0;
             }
         }
         .title_project {
@@ -136,7 +193,7 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 45px 0 0 0;
+            margin: 75px 0 0 0;
             .personal {
                 display: flex;
                 justify-content: space-between;
@@ -189,7 +246,7 @@ body {
             font-size: 18px;
             text-align: center;
             color: #C1C1C1;
-            margin: 130px 0 30px 0;
+            margin: 130px 0 55px 0;
         }
     }
     .page {
@@ -198,10 +255,10 @@ body {
             font-weight: 200;
             line-height: 61px;
             font-size: 48px;
-            margin: 70px 0 0 0;
+            margin: 90px 0 0 0;
         }
         .info {
-            margin: 50px 0 0 0;
+            margin: 70px 0 0 0;
             display: flex;
             justify-content: space-between;
             >div {
@@ -217,12 +274,12 @@ body {
                     font-weight: 500;
                     line-height: 31px;
                     font-size: 24px;
-                    margin: 0 0 6px 0;
+                    margin: 0 0 14px 0;
                 }
             }
         }
         .content {
-            margin: 70px 0 0 0;
+            margin: 110px 0 0 0;
             .full-img {
                 margin: 0 !important;
                 padding: 0 !important;
@@ -302,7 +359,54 @@ body {
 }
 
 @media screen and (max-width: 760px) {
-    #menu-mainmenu {
+    .wrapp-roma {
+        .wrapper {
+            margin: 10px auto 0 auto;
+        }
+        .top-menu .logo {
+            font-size: 24px;
+        }
+    }
+    .pagination a {
+        font-weight: 300;
+        line-height: 18px;
+        font-size: 14px;
+    }
+    .wrapp-roma .page .info .description .title {
+        line-height: 23px;
+        font-size: 18px;
+    }
+    .wrapp-roma .page .info .description {
+        font-weight: 300;
+        line-height: 18px;
+        font-size: 14px;
+    }
+    .wrapp-roma .wrapper .title_project {
+        font-weight: 200;
+        line-height: 31px;
+        font-size: 24px;
+        text-align: center;
+        margin: 0;
+    }
+    div#all_projects {
+        margin: 50px 0 0 0;
+    }
+    .all_projects {
+        margin: 45px 0 0 0;
+    }
+    .wrapp-roma .wrapper .copy {
+        font-weight: normal;
+        line-height: 18px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .wrapp-roma .wrapper .personal_info {
+        margin: 40px 0 0 0;
+    }
+    .wrapp-roma .wrapper .personal_info .all_info .description {
+        line-height: 30px;
+    }
+    #menu-mainmenu-1 {
         display: none;
     }
     .all_projects .item {
@@ -315,6 +419,7 @@ body {
     .wrapp-roma .wrapper .main-block .description {
         line-height: 23px;
         font-size: 18px;
+        margin: 30px 0 0 0;
     }
     .wrapp-roma .wrapper .main-block .title {
         line-height: 31px;
@@ -332,7 +437,7 @@ body {
         font-size: 14px;
     }
     .wrapp-roma .page>.title {
-        margin: 20px 0 0 0;
+        margin: 40px 0 0 0;
         font-weight: 200;
         line-height: 31px;
         font-size: 24px;
@@ -353,5 +458,57 @@ body {
     }
     .pagination {
         max-width: 100%;
+        margin: 100px auto;
     }
+    .wrapp-roma .wrapper .copy {
+        margin: 60px 0 55px 0;
+    }
+    .wrapp-roma .top-menu .mobile-menu {
+        display: block;
+        position: relative;
+        z-index: 10;
+        width: 24px;
+        height: 23px;
+        > div {
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            background: black;
+            transition: all 0.7s;
+            &:nth-child(1){
+                top: 0px;
+            }
+            &:nth-child(2){
+                top: 7px;
+            }
+            &:nth-child(3){
+                top: 14px;
+            }
+        }
+        &.active{
+            > div {
+                &:nth-child(1){
+                    top: 8px;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2){
+                    width: 0%;
+                }
+                &:nth-child(3){
+                    top: 8px;
+                    transform: rotate(-45deg);
+
+                }
+            }
+        }
+    }
+
+    // .mobile-menu-text{
+    //     display: block;
+    // }
 }
+
+.anime {
+    transition: all 1s;
+}
+  
