@@ -49,7 +49,6 @@ var FontFinder = /** @class */ (function () {
     FontFinder.prototype.findInclude = function () {
         var includes = [];
         var sheet = Array.from(document.styleSheets);
-        debugger;
         sheet.forEach(function (x) {
             var rule = Array.from(x.rules || x.cssRules || []);
             rule.forEach(function (y) {

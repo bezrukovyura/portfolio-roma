@@ -34,7 +34,7 @@
                 'numberposts' => 100,
                 'order'     => 'ASC',
                 'meta_key' => 'sort',
-                'orderby'   => 'meta_value'
+                'orderby'   => 'meta_value_num'
                 ) );
             foreach( $myposts as $post ){
                 ?>

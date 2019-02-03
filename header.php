@@ -2,7 +2,6 @@
 <html>
 	<head>
     <meta name="robots" content="noindex">
-
 	<link rel="stylesheet" href="/wp-content/themes/portfolio-roma/style_tpl.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio | Roman</title>

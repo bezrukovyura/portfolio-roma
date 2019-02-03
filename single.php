@@ -3,21 +3,26 @@
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	<div class="title"><a href="<?php echo the_permalink() ?>"><?php the_title(); ?></a></div>
 
-	<div class="info">
-		<div class="description">
-			<div class="title">Goal</div>
-			<?php echo get_field("goal", get_the_ID());?>
+	<?php if(strlen(get_field("goal", get_the_ID()))>1 || strlen(get_field("decision", get_the_ID()))>1 ) { ?>
+		<div class="info">
+			<?php if(strlen(get_field("goal", get_the_ID()))>1) { ?>
+				<div class="description">
+					<div class="title">Goal</div>
+					<?php echo get_field("goal", get_the_ID());?>
+				</div>
+			<?php } ?>
+			<?php if(strlen(get_field("decision", get_the_ID()))>1) { ?>
+				<div class="description">
+					<div class="title">Decision</div>
+					<?php echo get_field("decision", get_the_ID());?>
+				</div>
+			<?php } ?>
 		</div>
+	<?php } ?>
 
-		<div class="description">
-			<div class="title">Decision</div>
-			<?php echo get_field("decision", get_the_ID());?>
-		</div>
-	</div>
-	<div class="content"><?php the_content(); ?></div>
+	<div class="content"><?php echo get_the_content(); ?></div>
 	<div class="pagination">
 		<?php previous_post_link('%link', '<img src="/wp-content/themes/portfolio-roma/img/arrow_left.svg" />  last project') ?>
-
 		<?php next_post_link('%link', 'next project  <img src="/wp-content/themes/portfolio-roma/img/arrow_right.svg" />') ?> 
 	</div>
 	<?php endwhile; ?>
@@ -28,7 +33,7 @@
 		$related = get_posts( 
 			array( 
 				'category__in' => wp_get_post_categories($post->ID),
-				'numberposts' => 5,
+				'numberposts' => 100,
 				'post__not_in' => array($post->ID)
 			) 
 		);

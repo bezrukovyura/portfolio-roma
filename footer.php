@@ -14,7 +14,7 @@
 		<script>
 			hash = document.querySelectorAll(".hash");
 			for(let i = 0; i < hash.length; i++) {
-				let text = hash[0].innerHTML;
+				let text = hash[i].innerHTML;
 				hash[i].innerHTML = text.split("#").join("<font>#</font>");
 			}
 
@@ -34,7 +34,6 @@
 			}
 			document.onclick = function(event) {
 				var el = event.target;
-				debugger
 				if (event.target.parentElement.parentElement.parentElement.classList.contains("mobile-menu-text")) {
 					document.querySelector(".mobile-menu").classList.remove("active");
 					document.querySelector(".mobile-menu-text").style.display = "none";
@@ -56,7 +55,6 @@
 			var oldDirect = false;
 
 			window.addEventListener("scroll", function (event) {
-				debugger
 				if((this.scrollY < oldScroll) != oldDirect){
 					addMenuScroll(this.scrollY < oldScroll);
 					oldDirect = this.scrollY < oldScroll;
@@ -82,12 +80,21 @@
 					});
 			}
 
+			function videoWidth(){	
+	
+				videos = document.querySelectorAll(".rom-vimeo");
+				width = document.querySelector("body > div > .wrapper").offsetWidth;
+				for(i = 0; i < videos.length; i++) {
+					videos[i].width = width + "px";
+					videos[i].height = (width * 9) / 16 + "px";
+				}
+			}
+
+			setTimeout(videoWidth, 5000);
+
+
 
 		</script>
-
-		<script src="/wp-content/themes/portfolio-roma/js/finder-unused-fonts/index.js" ></script>
-
-
 
 	</body>
 </html>

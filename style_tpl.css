@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&subset=cyrillic-ext');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:100,300,400,500&subset=cyrillic-ext');
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -2199,10 +2198,10 @@ body {
   white-space: pre;
   white-space: pre-wrap;
   font-style: normal;
-  font-weight: normal;
-  line-height: 46px;
-  font-size: 36px;
-  line-height: 24px;
+  font-weight: 300;
+  line-height: 34px;
+  font-size: 24px;
+  max-width: 420px;
 }
 .wrapp-roma .wrapper .personal_info .all_info .description strong {
   font-style: normal;
@@ -2211,6 +2210,22 @@ body {
   font-size: 18px;
   color: #7540EE;
   line-height: 10px;
+}
+.wrapp-roma .wrapper .personal_info .all_info .description a {
+  margin: 22px 0 0 0;
+  font-weight: normal;
+  line-height: 46px;
+  font-size: 36px;
+  display: block;
+  float: left;
+  position: relative;
+}
+.wrapp-roma .wrapper .personal_info .all_info .description a:after {
+  background: #7B2BF2;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
 }
 .wrapp-roma .wrapper .copy {
   font-style: normal;
@@ -2368,6 +2383,10 @@ body {
   }
   .wrapp-roma .wrapper .personal_info .all_info .description {
     line-height: 30px;
+    font-size: 18px;
+  }
+  .wrapp-roma .wrapper .personal_info .all_info .description a {
+    font-size: 24px;
   }
   #menu-mainmenu-1 {
     display: none;
