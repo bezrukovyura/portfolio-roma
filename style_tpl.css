@@ -2065,6 +2065,7 @@ body {
   display: none;
   background: white;
   height: 100vh;
+  top: 0px;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -2088,13 +2089,17 @@ body {
   max-width: 100%;
   background: #ffffff;
   top: 0;
+  z-index: 100;
 }
 .wrapp-roma .top-menu {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 8%;
+  padding: 18px 3%;
+}
+.wrapp-roma .top-menu.scroll-up {
+  padding: 18px 7%;
 }
 .wrapp-roma .top-menu .mobile-menu {
   display: none;
