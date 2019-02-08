@@ -22,7 +22,7 @@
 
 	<div class="content"><?php echo get_the_content(); ?></div>
 	<div class="pagination">
-		<?php previous_post_link('%link', '<img src="/wp-content/themes/portfolio-roma/img/arrow_left.svg" />  last project') ?>
+		<?php previous_post_link('%link', '<img src="/wp-content/themes/portfolio-roma/img/arrow_left.svg" />  prev project') ?>
 		<?php next_post_link('%link', 'next project  <img src="/wp-content/themes/portfolio-roma/img/arrow_right.svg" />') ?> 
 	</div>
 	<?php endwhile; ?>
