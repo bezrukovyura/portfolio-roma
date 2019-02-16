@@ -5,9 +5,13 @@
         <meta name="robots" content="noindex">
         <link rel="stylesheet" href="/wp-content/themes/portfolio-roma/style_tpl.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Portfolio | Roman</title>
-<meta name="yandex-verification" content="6ea0d3db265f63a1" />
+        <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
+        <meta name="description" content="<?php bloginfo('description'); ?>" />
 
+        <meta property="og:title" content="<?php bloginfo('name'); ?><?php wp_title(); ?>"/>
+        <meta property="og:description" content="<?php bloginfo('description'); ?>"/>
+        <meta property="og:image" content="http://creative5.net/wp-content/themes/portfolio-roma/img/ic.jpg"/>
+        <meta property="vk:image"  content="http://creative5.net/wp-content/themes/portfolio-roma/img/ic.jpg" />
     </head>
 
     <div class="mobile-menu-text">
