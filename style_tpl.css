@@ -2065,7 +2065,6 @@ body {
   display: none;
   background: white;
   height: 100vh;
-  top: 0px;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -2078,7 +2077,7 @@ body {
   font-size: 36px;
 }
 .wrapp-roma.megamenu {
-  max-width: 90%;
+  max-width: 95%;
   margin: 0 auto;
   transition: all 0.8s;
   z-index: 200;
@@ -2089,7 +2088,6 @@ body {
   max-width: 100%;
   background: #ffffff;
   top: 0;
-  z-index: 100;
 }
 .wrapp-roma .top-menu {
   width: 100%;
@@ -2098,7 +2096,7 @@ body {
   align-items: center;
   padding: 18px 3%;
 }
-.wrapp-roma .top-menu.scroll-up {
+.wrapp-roma.scroll-up .top-menu {
   padding: 18px 7%;
 }
 .wrapp-roma .top-menu .mobile-menu {
@@ -2344,6 +2342,9 @@ body {
   }
 }
 @media screen and (max-width: 760px) {
+  .wrapp-roma .wrapper .personal_info .all_info {
+  margin: 25px 0 0 0;
+}
   .wrapp-roma .wrapper {
     margin: 10px auto 0 auto;
   }

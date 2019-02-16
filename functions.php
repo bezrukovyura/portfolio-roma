@@ -166,6 +166,8 @@ function add_slug_to_body_class($classes)
     return $classes;
 }
 
+add_theme_support('post-thumbnails');
+
 // If Dynamic Sidebar Exists
 if (function_exists('register_sidebar'))
 {

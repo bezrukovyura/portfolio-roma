@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="/wp-content/themes/portfolio-roma/style_tpl.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Portfolio | Roman</title>
+<meta name="yandex-verification" content="6ea0d3db265f63a1" />
+
     </head>
 
     <div class="mobile-menu-text">
